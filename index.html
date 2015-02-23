@@ -13,22 +13,24 @@
 			$(document).ready( function() {
 				$("#prompt_button").click( function() {
 					jPrompt('INPUT YOUR MARK', '', 'Prompt Dialog', function(x) {
-						if(x >= 90 ){
-								alert("GPA A+");
-						}else if(x >= 85 ){
-								alert("GPA A");
-						}else if(x >= 80 ){
-								alert("GPA A-");
-						}else if(x >= 70 ){
-								alert("GPA B+");
-						}else if(x >= 60 ){
-								alert("GPA B");
-						}else if(x >= 50 ){
-								alert("GPA C");
-						}else if(x >= 40 ){
-								alert("GPA D");
+						if((x >= 90) && (x <=100 )){
+								alert("YOUR GRADE -  GPA "+ x +" ("+"A+"+")");
+						}else if((x >= 85) && (x <=89 )){
+								alert("YOUR GRADE -  GPA "+ x +" ("+"A"+")");
+						}else if((x >= 80) && (x <= 84)){
+								alert("YOUR GRADE -  GPA "+ x +" ("+"A-"+")");
+						}else if((x >= 70) && (x <= 79)){
+								alert("YOUR GRADE -  GPA "+ x +" ("+"B+"+")");
+						}else if((x >= 60) && (x <= 69)){
+								alert("YOUR GRADE -  GPA "+ x +" ("+"B"+")");
+						}else if((x >= 50) && (x <= 59)){
+								alert("YOUR GRADE -  GPA "+ x +" ("+"C"+")");
+						}else if((x >= 40) && (x <= 49)){
+								alert("YOUR GRADE -  GPA "+ x +" ("+"D"+")");
+						}else if((x >= 0) && (x <= 39)){
+								alert("YOUR GRADE -  GPA "+ x +" ("+"FAIL"+")");
 						}else{
-							alert("GPA F");
+							alert("YOU INPUT INVALID MARK");
 							
 						};
 					});
