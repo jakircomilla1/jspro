@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<title>Results</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<link href="css/jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/jquery.ui.draggable.js" type="text/javascript"></script>
+		<script src="js/jquery.alerts.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			
+			$(document).ready( function() {
+				$("#prompt_button").click( function() {
+					jPrompt('INPUT YOUR MARK', '', 'Prompt Dialog', function(x) {
+						if(x >= 90 ){
+								alert("GPA A+");
+						}else if(x >= 85 ){
+								alert("GPA A");
+						}else if(x >= 80 ){
+								alert("GPA A-");
+						}else if(x >= 70 ){
+								alert("GPA B+");
+						}else if(x >= 60 ){
+								alert("GPA B");
+						}else if(x >= 50 ){
+								alert("GPA C");
+						}else if(x >= 40 ){
+								alert("GPA D");
+						}else{
+							alert("GPA F");
+							
+						};
+					});
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+		<h2>Welcome to CodersTrust Result section</h2>
+		<fieldset>
+			<legend>Result</legend>
+			<p class="first">CodersTrust Students result based on Students performance. Which are worksnaps Time; Communication Skills; Facebook Group Follow Up & Submission of Projects.</p>
+			<p class="second">
+				<input id="prompt_button" type="button" value="CLICK HERE" />
+			</p>
+		</fieldset>
+		<h2>Thank you to visit our site.</h2>
+	</body>
+</html>
